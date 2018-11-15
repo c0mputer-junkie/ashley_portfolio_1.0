@@ -4,12 +4,11 @@
   "description": "responsive web portfolio",
   "main": "index.js",
   "scripts": {
-    "sass": "node-sass -w scss/ -o css/ --recursive"
+    "sass": "node-sass -w scss/ -o src/css/ --recursive"
   },
   "author": "Ashley Addison",
   "license": "ISC",
   "dependencies": {
-    "node-sass": "^4.10.0",
-    "npm": "^6.4.1"
+    "node-sass": "^4.10.0"
   }
 }
