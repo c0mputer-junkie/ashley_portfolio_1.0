@@ -7,8 +7,7 @@ body {
   background-color: #020c0e;
   color: white;
   height: 100%;
-  line-height: 1.5;
-  background: opacity(0.2); }
+  line-height: 1.5; }
 
 .nav__menu {
   display: flex;
