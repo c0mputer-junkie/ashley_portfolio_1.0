@@ -1,0 +1,15 @@
+{
+  "name": "ashley_portfolio_1.0",
+  "version": "1.0.0",
+  "description": "responsive web portfolio",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Ashley Addison",
+  "license": "ISC",
+  "dependencies": {
+    "node-sass": "^4.10.0",
+    "npm": "^6.4.1"
+  }
+}
