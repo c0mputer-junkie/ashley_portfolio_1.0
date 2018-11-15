@@ -1,0 +1,267 @@
+$primary-color: rgb(2, 12, 14);
+$secondary-color: rgb(27, 216, 233);
+$font-family: 'Anton', sans-serif;
+$tablet: 768px;
+$desktop: 1200px;
+
+@mixin easeOut {
+    transition: all 1.5s ease-out;
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: $primary-color;
+    color: white;
+    height: 100%;
+    line-height: 1.5;
+    background: opacity(0.2);
+}
+
+.nav{
+    &__menu{
+        display: flex;
+        justify-content: space-around;
+        padding: 12px;
+        align-items: center;
+    }
+    &__logo{
+        font-family: $font-family;
+        font-size: 24px;    
+    }
+    &__logo-name{
+       color: white;
+       text-decoration: none;
+    }
+    &__links{
+        list-style: none;
+    
+        align-items: center;
+        @media only screen and (min-width: $tablet) {
+        display: flex;
+        font-size: 18px;
+        }
+    }
+    &__items{
+        padding-left: 24px;
+    }
+    &__link{
+        color: $secondary-color;
+        text-decoration: none;
+    }
+    &__image-container{
+        object-fit: contain;
+        width: 100%;
+        position: absolute;
+        z-index: -1;
+    
+    }
+    &__background-image{
+        width: 100%;
+    }
+}
+
+.home{
+    padding: 1rem;
+    height: 100%;
+    margin-top: 10vh;
+    position: relative;
+    flex-wrap: wrap;
+    display: flex;
+    @media only screen and (min-width: $tablet) {
+        margin-top: 22vh;
+        }
+        @media only screen and (min-width: $desktop){
+           margin-top: 30vh;
+        }
+    &__heading{
+        font-weight: 300;
+    }
+    &__heading--lg{
+        font-family: $font-family;
+        font-size: 22px;
+        width: 100%;
+        @media only screen and (min-width: $tablet){
+            font-size: 2.5rem;
+        }
+        @media only screen and (min-width: $desktop){
+            font-size: 4rem;
+        }
+    }
+    &__text-secondary{
+        color: $secondary-color;
+    }
+    &__heading--sm{
+        margin-bottom: 0.5em;
+       width: 100%;
+       font-size: 14px;
+       @media only screen and(min-width: $tablet){
+        font-size: 1.5rem;
+        margin-bottom: 2rem;
+        padding: 0.2rem, 1rem;
+        font-size: 2rem;
+       }
+    }
+}
+a{
+    color: white;
+}
+.icons{
+    display: flex;  
+    width: 100%;
+    a{
+        padding: 0.2rem;
+        text-decoration: none;
+        &:hover{
+            color: $secondary-color;
+            @include easeOut;
+            padding: 0.4rem;
+            
+        }
+    }
+}
+
+.fa-twitter{
+    font-size: 1em;
+    @media only screen and (min-width: $tablet){
+        font-size: 2em;
+    }
+}
+
+.fa-linkedin{
+    font-size: 1em;
+    @media only screen and (min-width: $tablet){
+        font-size: 2em;
+    }
+}
+.fa-github{
+    font-size: 1em;
+    @media only screen and (min-width: $tablet){
+        font-size: 2em;
+    }
+}
+.about {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10vh;
+    @media only screen and(min-width: $tablet) {
+        margin-top: 20vh;
+    }
+    @media only screen and (min-width: $desktop){
+        margin-top: 25vh;
+    }
+    &__title {
+        width: 100%;
+        padding-bottom: 2rem;
+        text-align: center;
+        font-size: 22px;
+        @media only screen and (min-width: $tablet){
+            font-size: 2rem;
+        }
+    }
+    &__img{
+        width: 200px;
+        border-radius: 50%;
+    }
+    &__bio {
+        padding-top: 1rem;
+        width: 50%;
+        @media only screen and (min-width:$tablet){
+            padding-left: 40px;
+            
+        }
+    }
+    &about__secondary{
+        @media only screen and(min-width: $desktop){
+            padding-left: 127px;
+        }
+    }
+}
+
+
+.technologies{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10vh;
+    @media only screen and (min-width:$tablet){
+        margin-top: 20vh;
+    }
+    &__header {
+        width: 100%;
+        text-align: center;
+        font-size: 2rem;
+        padding-bottom: 2rem;
+        @media only screen and (min-width: $tablet){
+        padding: 2.5rem;
+        }
+    }
+    &__column {
+        display: flex;
+        width: 100%;
+        justify-content: space-evenly;
+        padding-left: 24px;
+    }
+    &__title {
+        padding-bottom: 32px;
+        font-size: x-large;
+        color: $secondary-color;
+    }
+    &__list {
+        display: flex;
+        flex-direction: column;
+        padding-left: 28px;
+    }
+    &__list-copy {
+        list-style: none;
+    }
+    &__item {
+        padding-bottom: 20px;
+    }
+}
+
+.projects{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    flex-direction: row;
+    margin-top: 20vh;
+    padding-bottom: 3rem;
+    padding-left: 20px;
+    &__header {
+        padding-bottom: 2rem;
+        text-align: center;
+        width: 100%;
+        font-size: 2rem;
+    }
+    &__pages {
+        width: 425px;
+        height: 350px;
+        padding: 24px;
+    }
+    &__coming-soon{
+        width: 425px;
+        height: 350px;
+       position:relative;
+    }
+    &__giphy-embed {
+        width: 425px;
+        height: 350px;
+    }
+}
+footer {
+    display: flex;
+    justify-content: flex-start;
+    padding-left: 5rem;
+    align-items: center;
+}
+.copyright {
+    padding-left: 6px;
+}
